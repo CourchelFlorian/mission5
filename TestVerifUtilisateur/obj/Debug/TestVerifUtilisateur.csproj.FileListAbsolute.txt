@@ -5,3 +5,10 @@ F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\TestVerifUtilis
 F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\TestVerifUtilisateur\obj\Debug\ResolveAssemblyReference.cache
 F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.dll
 F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.pdb
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\TestVerifUtilisateur.dll
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\TestVerifUtilisateur.pdb
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.exe
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.pdb
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.csprojResolveAssemblyReference.cache
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.dll
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.pdb

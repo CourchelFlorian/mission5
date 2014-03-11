@@ -20,7 +20,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             string newDate = date + " " + heure + ":" + min;
             SqlCommand maRequete;
             string sqlStr = "INSERT INTO serviceDemande (idAdherent, idService, dateDemande) VALUES("+idAdherent+","+idService+",'"+newDate+"')";
-            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
@@ -42,7 +42,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         {
             SqlCommand maRequete;
             string sqlStr = "SELECT adherent.nomAdherent, etat.libelleEtat, etat.id AS idEtat, typeService.libelleService, typeService.prix, serviceDemande.dateDemande, serviceDemande.id AS idServiceDemande, adherent.id AS Expr1, etat.id AS Expr2, typeService.id AS Expr3 FROM serviceDemande INNER JOIN adherent ON serviceDemande.idAdherent = adherent.id INNER JOIN etat ON serviceDemande.idEtat = etat.id INNER JOIN typeService ON serviceDemande.idService = typeService.id";
-            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
@@ -72,7 +72,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             
             SqlCommand maRequete;
             string sqlStr = "UPDATE serviceDemande SET idEtat = "+idEtat+" WHERE (id = "+idSericedemande+")";
-            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
@@ -95,7 +95,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         {
             SqlCommand maRequete;
             string sqlStr = "SELECT ligue.id AS idLigue, ligue.libelleLigue AS nomLigue, adherent.nomAdherent, etat.libelleEtat, typeService.libelleService, typeService.prix, serviceDemande.dateDemande FROM adherent INNER JOIN serviceDemande ON adherent.id = serviceDemande.idAdherent INNER JOIN typeService ON serviceDemande.idService = typeService.id INNER JOIN ligue ON adherent.idLigue = ligue.id INNER JOIN etat ON serviceDemande.idEtat = etat.id WHERE (MONTH(serviceDemande.dateDemande) = " + mois + ") AND (etat.id = 1) AND (YEAR(serviceDemande.dateDemande) = " + annee + ")";
-            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
@@ -134,7 +134,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         {
             SqlCommand maRequete;
             string sqlStr = "SELECT DISTINCT YEAR(dateDemande) AS annee FROM serviceDemande";
-            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
@@ -157,6 +157,8 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
                 }
 
             }
+
+
             catch (Exception e) // Try … catch permet la gestion des erreurs.
             {
 

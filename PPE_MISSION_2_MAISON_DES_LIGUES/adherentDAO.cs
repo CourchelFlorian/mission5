@@ -21,7 +21,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             pId = 0;
             try
             {
-                string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=m2l_Marco_Salim ;User ID=sio2slam ;Password=";
+                string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
                 SqlConnection maConnexion;
                 maConnexion = new SqlConnection();
                 maConnexion.ConnectionString = connStr;
