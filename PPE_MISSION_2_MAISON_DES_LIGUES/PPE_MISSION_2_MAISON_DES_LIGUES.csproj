@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{457E28E1-8E4C-499B-B670-A9B98492D3A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PPE_MISSION_2_MAISON_DES_LIGUES</RootNamespace>
+    <AssemblyName>PPE_MISSION_2_MAISON_DES_LIGUES</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adherent.cs" />
+    <Compile Include="adherentDAO.cs" />
+    <Compile Include="erreurAuthen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="erreurAuthen.Designer.cs">
+      <DependentUpon>erreurAuthen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conexion.Designer.cs">
+      <DependentUpon>conexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facture.Designer.cs">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireModif.Designer.cs">
+      <DependentUpon>FormulaireModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ligue.cs" />
+    <Compile Include="LigueDAO.cs" />
+    <Compile Include="m2l_Marco_SalimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m2l_Marco_SalimDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m2l_Marco_SalimDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="menuGrade0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuGrade0.Designer.cs">
+      <DependentUpon>menuGrade0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuGrade1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuGrade1.Designer.cs">
+      <DependentUpon>menuGrade1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceDemandeDAO.cs" />
+    <Compile Include="TypeService.cs" />
+    <Compile Include="TypeServiceDAO.cs" />
+    <EmbeddedResource Include="conexion.resx">
+      <DependentUpon>conexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="erreurAuthen.resx">
+      <DependentUpon>erreurAuthen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture.resx">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireModif.resx">
+      <DependentUpon>FormulaireModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuGrade0.resx">
+      <DependentUpon>menuGrade0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuGrade1.resx">
+      <DependentUpon>menuGrade1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="m2l_Marco_SalimDataSet.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet1.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet1.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet2.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet2.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet3.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet3.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet4.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet4.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet5.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet5.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet6.xsc">
+      <DependentUpon>m2l_Marco_SalimDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m2l_Marco_SalimDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m2l_Marco_SalimDataSet6.xss">
+      <DependentUpon>m2l_Marco_SalimDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

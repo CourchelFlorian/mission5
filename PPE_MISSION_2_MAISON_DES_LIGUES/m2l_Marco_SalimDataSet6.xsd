@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="m2l_Marco_SalimDataSet6" targetNamespace="http://tempuri.org/m2l_Marco_SalimDataSet6.xsd" xmlns:mstns="http://tempuri.org/m2l_Marco_SalimDataSet6.xsd" xmlns="http://tempuri.org/m2l_Marco_SalimDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="m2l_Marco_SalimConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="m2l_Marco_SalimConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PPE_MISSION_2_MAISON_DES_LIGUES.Properties.Settings.GlobalReference.Default.m2l_Marco_SalimConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="m2l_Marco_SalimDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="m2l_Marco_SalimDataSet6" msprop:Generator_UserDSName="m2l_Marco_SalimDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

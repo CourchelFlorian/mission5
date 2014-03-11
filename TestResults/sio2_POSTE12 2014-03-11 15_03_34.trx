@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="cb638fdb-e3b6-4711-9005-6788fd41926d" name="sio2@POSTE12 2014-03-11 15:03:34" runUser="poste12\sio2" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="7bfcc520-9dcf-4388-8289-925ffacb3a24">
+    <Description>Il s'agit des paramètres de test par défaut pour une série de tests locale.</Description>
+    <Deployment enabled="false" runDeploymentRoot="sio2_POSTE12 2014-03-11 15_03_34">
+      <DeploymentItem filename="F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\PPE_MISSION_2_MAISON_DES_LIGUES\bin\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-11T15:03:34.2084956+01:00" queuing="2014-03-11T15:03:35.2380974+01:00" start="2014-03-11T15:03:35.2848975+01:00" finish="2014-03-11T15:03:37.7965019+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="verifUtilisateurTest" storage="f:\cours\ppe\mission5\ressources\ppe_mission_2_maison_des_ligues\testverifutilisateur\bin\debug\testverifutilisateur.dll" id="cbabb1e6-b7ae-a65f-1ffd-e074da39e22e">
+      <Execution id="bfc7b583-4b47-439a-aace-0d2931666569" />
+      <TestMethod codeBase="F:/cours/ppe/mission5/ressources/PPE_MISSION_2_MAISON_DES_LIGUES/TestVerifUtilisateur/bin/Debug/TestVerifUtilisateur.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestVerifUtilisateur.adherentDAOTest, TestVerifUtilisateur, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verifUtilisateurTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="cbabb1e6-b7ae-a65f-1ffd-e074da39e22e" executionId="bfc7b583-4b47-439a-aace-0d2931666569" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="bfc7b583-4b47-439a-aace-0d2931666569" testId="cbabb1e6-b7ae-a65f-1ffd-e074da39e22e" testName="verifUtilisateurTest" computerName="POSTE12" duration="00:00:00.2354879" startTime="2014-03-11T15:03:35.4096977+01:00" endTime="2014-03-11T15:03:36.0336988+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfc7b583-4b47-439a-aace-0d2931666569">
+      <Output>
+        <ErrorInfo>
+          <Message>Échec de Assert.AreEqual. Attendu : &lt;False&gt;, Réel : &lt;True&gt;. </Message>
+          <StackTrace>   à TestVerifUtilisateur.adherentDAOTest.verifUtilisateurTest() dans F:\cours\ppe\mission5\ressources\PPE_MISSION_2_MAISON_DES_LIGUES\TestVerifUtilisateur\adherentDAOTest.cs:ligne 85
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
