@@ -11,10 +11,17 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
 {
     public partial class menuGrade1 : Form
     {
+        private Form menuConnexion;
         public menuGrade1()
         {
             InitializeComponent();
         }
+        public menuGrade1(Form pForm)
+        {
+            InitializeComponent();
+            menuConnexion = pForm;
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -32,7 +39,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Facture factureForm = new Facture();
+            Facture factureForm = new Facture(menuConnexion);
             factureForm.Show();
             this.Close();
         }
@@ -49,6 +56,12 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
                 FormulaireModif monForm = new FormulaireModif(idServiceDemande, idEtat, dataGridView1);
                 monForm.Show();
             }
+        }
+
+        private void btnDeco_Click(object sender, EventArgs e)
+        {
+            menuConnexion.Show();
+            this.Close();
         }
     }
 }

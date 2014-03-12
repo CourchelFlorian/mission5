@@ -32,6 +32,11 @@
             this.comboMois = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nomLigue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomAdherent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libelleEtat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libelleService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ligueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.m2l_Marco_SalimDataSet5 = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet5();
             this.ligueTableAdapter = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet5TableAdapters.ligueTableAdapter();
@@ -39,11 +44,7 @@
             this.comboAnnee = new System.Windows.Forms.ComboBox();
             this.m2l_Marco_SalimDataSet6 = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet6();
             this.m2lMarcoSalimDataSet6BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nomLigue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomAdherent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libelleEtat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libelleService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ligueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet5)).BeginInit();
@@ -86,6 +87,36 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(499, 394);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // nomLigue
+            // 
+            this.nomLigue.HeaderText = "nomLigue";
+            this.nomLigue.Name = "nomLigue";
+            this.nomLigue.ReadOnly = true;
+            // 
+            // nomAdherent
+            // 
+            this.nomAdherent.HeaderText = "nomAdherent";
+            this.nomAdherent.Name = "nomAdherent";
+            this.nomAdherent.ReadOnly = true;
+            // 
+            // libelleEtat
+            // 
+            this.libelleEtat.HeaderText = "Etat";
+            this.libelleEtat.Name = "libelleEtat";
+            this.libelleEtat.ReadOnly = true;
+            // 
+            // libelleService
+            // 
+            this.libelleService.HeaderText = "Service";
+            this.libelleService.Name = "libelleService";
+            this.libelleService.ReadOnly = true;
+            // 
+            // prix
+            // 
+            this.prix.HeaderText = "Prix";
+            this.prix.Name = "prix";
+            this.prix.ReadOnly = true;
             // 
             // ligueBindingSource
             // 
@@ -131,41 +162,22 @@
             this.m2lMarcoSalimDataSet6BindingSource.DataSource = this.m2l_Marco_SalimDataSet6;
             this.m2lMarcoSalimDataSet6BindingSource.Position = 0;
             // 
-            // nomLigue
+            // btnDeco
             // 
-            this.nomLigue.HeaderText = "nomLigue";
-            this.nomLigue.Name = "nomLigue";
-            this.nomLigue.ReadOnly = true;
-            // 
-            // nomAdherent
-            // 
-            this.nomAdherent.HeaderText = "nomAdherent";
-            this.nomAdherent.Name = "nomAdherent";
-            this.nomAdherent.ReadOnly = true;
-            // 
-            // libelleEtat
-            // 
-            this.libelleEtat.HeaderText = "Etat";
-            this.libelleEtat.Name = "libelleEtat";
-            this.libelleEtat.ReadOnly = true;
-            // 
-            // libelleService
-            // 
-            this.libelleService.HeaderText = "Service";
-            this.libelleService.Name = "libelleService";
-            this.libelleService.ReadOnly = true;
-            // 
-            // prix
-            // 
-            this.prix.HeaderText = "Prix";
-            this.prix.Name = "prix";
-            this.prix.ReadOnly = true;
+            this.btnDeco.Location = new System.Drawing.Point(16, 35);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(80, 24);
+            this.btnDeco.TabIndex = 7;
+            this.btnDeco.Text = "Deconnexion";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
             // Facture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 503);
+            this.Controls.Add(this.btnDeco);
             this.Controls.Add(this.comboAnnee);
             this.Controls.Add(this.labelFacture);
             this.Controls.Add(this.dataGridView1);
@@ -202,5 +214,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn libelleEtat;
         private System.Windows.Forms.DataGridViewTextBoxColumn libelleService;
         private System.Windows.Forms.DataGridViewTextBoxColumn prix;
+        private System.Windows.Forms.Button btnDeco;
     }
 }

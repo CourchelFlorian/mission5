@@ -27,13 +27,14 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
                 if (grade == 1)
                 {
                     // MENU RESPONSABLE
-                    menuGrade1 menu1 = new menuGrade1();
+                    menuGrade1 menu1 = new menuGrade1(this);
                     menu1.Show();
+                    this.Hide();
                 }
                 else
                 {
                     // MENU UTILISATEUR
-                    menuGrade0 menu0 = new menuGrade0(id);
+                    menuGrade0 menu0 = new menuGrade0(id, this);
                     menu0.Show();
                 }
             }

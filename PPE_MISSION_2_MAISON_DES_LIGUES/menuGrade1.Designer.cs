@@ -45,6 +45,7 @@
             this.m2l_Marco_SalimDataSet3 = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet3();
             this.etatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.etatTableAdapter = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet3TableAdapters.etatTableAdapter();
+            this.btnDeco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.etatBindingSource)).BeginInit();
@@ -184,11 +185,22 @@
             // 
             this.etatTableAdapter.ClearBeforeFill = true;
             // 
+            // btnDeco
+            // 
+            this.btnDeco.Location = new System.Drawing.Point(326, 13);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(81, 23);
+            this.btnDeco.TabIndex = 4;
+            this.btnDeco.Text = "Deconnexion";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
+            // 
             // menuGrade1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 548);
+            this.Controls.Add(this.btnDeco);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -223,5 +235,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idAdherent;
         private System.Windows.Forms.DataGridViewTextBoxColumn idServiceDemande;
         private System.Windows.Forms.DataGridViewTextBoxColumn idetat;
+        private System.Windows.Forms.Button btnDeco;
     }
 }

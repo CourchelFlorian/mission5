@@ -9,6 +9,6 @@ C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\TestVerif
 C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\TestVerifUtilisateur.pdb
 C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.exe
 C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\bin\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.pdb
-C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.csprojResolveAssemblyReference.cache
 C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.dll
 C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\TestVerifUtilisateur.pdb
+C:\Users\sio2\Documents\GitHub\mission5\TestVerifUtilisateur\obj\Debug\ResolveAssemblyReference.cache

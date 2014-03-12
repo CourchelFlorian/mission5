@@ -11,6 +11,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
 {
     public partial class Facture : Form
     {
+        private Form menuConnexion;
         ServiceDemandeDAO factureEditer = new ServiceDemandeDAO();
         int ligue;
         int mois;
@@ -18,6 +19,12 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         public Facture()
         {
             InitializeComponent();
+        }
+
+        public Facture(Form pForm)
+        {
+            InitializeComponent();
+            menuConnexion = pForm;
         }
 
         private void Facture_Load(object sender, EventArgs e)
@@ -54,6 +61,12 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             annee = Convert.ToInt16(comboAnnee.SelectedItem);
             dataGridView1.Rows.Clear();
             factureEditer.factureEdit(dataGridView1, mois, annee);
+        }
+
+        private void btnDeco_Click(object sender, EventArgs e)
+        {
+            menuConnexion.Show();
+            this.Close();
         }
     }
 }

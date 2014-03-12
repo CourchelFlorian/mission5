@@ -49,6 +49,7 @@
             this.labelMin = new System.Windows.Forms.Label();
             this.comboHeure = new System.Windows.Forms.ComboBox();
             this.comboMin = new System.Windows.Forms.ComboBox();
+            this.btnDeco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.typeServiceBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet)).BeginInit();
@@ -210,11 +211,22 @@
             this.comboMin.TabIndex = 9;
             this.comboMin.Visible = false;
             // 
+            // btnDeco
+            // 
+            this.btnDeco.Location = new System.Drawing.Point(198, 13);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(81, 23);
+            this.btnDeco.TabIndex = 10;
+            this.btnDeco.Text = "Deconnexion";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
+            // 
             // menuGrade0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 314);
+            this.Controls.Add(this.btnDeco);
             this.Controls.Add(this.comboMin);
             this.Controls.Add(this.comboHeure);
             this.Controls.Add(this.labelMin);
@@ -263,5 +275,6 @@
         private System.Windows.Forms.Label labelMin;
         private System.Windows.Forms.ComboBox comboHeure;
         private System.Windows.Forms.ComboBox comboMin;
+        private System.Windows.Forms.Button btnDeco;
     }
 }

@@ -12,9 +12,16 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
     public partial class menuGrade0 : Form
     {
         private int idadherent;
+        private Form menuConnexion;
         public menuGrade0()
         {
             InitializeComponent();
+        }
+        public menuGrade0(Int32 pId, Form pForm)
+        {
+            InitializeComponent();
+            menuConnexion = pForm;
+            idadherent = pId;
         }
         public menuGrade0(int pId)
         {
@@ -72,6 +79,12 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             {
                 MessageBox.Show("Une erreur est survenue");
             }
+        }
+
+        private void btnDeco_Click(object sender, EventArgs e)
+        {
+            menuConnexion.Show();
+            this.Close();
         }
     }
 }
