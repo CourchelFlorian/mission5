@@ -25,6 +25,4 @@ C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\
 C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.menuGrade0.resources
 C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.menuGrade1.resources
 C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.Properties.Resources.resources
-C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\sio2\Documents\GitHub\mission5\PPE_MISSION_2_MAISON_DES_LIGUES\obj\x86\Debug\PPE_MISSION_2_MAISON_DES_LIGUES.csproj.GenerateResource.Cache
