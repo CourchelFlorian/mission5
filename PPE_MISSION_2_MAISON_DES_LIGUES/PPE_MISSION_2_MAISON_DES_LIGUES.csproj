@@ -48,6 +48,11 @@
   <ItemGroup>
     <Compile Include="Adherent.cs" />
     <Compile Include="adherentDAO.cs" />
+    <Compile Include="bddGestServKestCourcDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bddGestServKestCourcDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="erreurAuthen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +159,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="bddGestServKestCourcDataSet.xsc">
+      <DependentUpon>bddGestServKestCourcDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bddGestServKestCourcDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bddGestServKestCourcDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bddGestServKestCourcDataSet.xss">
+      <DependentUpon>bddGestServKestCourcDataSet.xsd</DependentUpon>
+    </None>
     <None Include="m2l_Marco_SalimDataSet.xsc">
       <DependentUpon>m2l_Marco_SalimDataSet.xsd</DependentUpon>
     </None>

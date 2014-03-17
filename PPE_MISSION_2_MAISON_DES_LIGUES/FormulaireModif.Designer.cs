@@ -29,26 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboChangement = new System.Windows.Forms.ComboBox();
+            this.etatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bddGestServKestCourcDataSet = new PPE_MISSION_2_MAISON_DES_LIGUES.bddGestServKestCourcDataSet();
             this.etatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.m2l_Marco_SalimDataSet4 = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet4();
             this.labelChangement = new System.Windows.Forms.Label();
             this.etatTableAdapter = new PPE_MISSION_2_MAISON_DES_LIGUES.m2l_Marco_SalimDataSet4TableAdapters.etatTableAdapter();
             this.buttValiderChangement = new System.Windows.Forms.Button();
+            this.etatTableAdapter1 = new PPE_MISSION_2_MAISON_DES_LIGUES.bddGestServKestCourcDataSetTableAdapters.etatTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.etatBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bddGestServKestCourcDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.etatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboChangement
+            // etatBindingSource1
             // 
-            this.comboChangement.DataSource = this.etatBindingSource;
-            this.comboChangement.DisplayMember = "libelleEtat";
-            this.comboChangement.FormattingEnabled = true;
-            this.comboChangement.Location = new System.Drawing.Point(142, 21);
-            this.comboChangement.Name = "comboChangement";
-            this.comboChangement.Size = new System.Drawing.Size(121, 21);
-            this.comboChangement.TabIndex = 0;
-            this.comboChangement.ValueMember = "id";
+            this.etatBindingSource1.DataMember = "etat";
+            this.etatBindingSource1.DataSource = this.bddGestServKestCourcDataSet;
+            // 
+            // bddGestServKestCourcDataSet
+            // 
+            this.bddGestServKestCourcDataSet.DataSetName = "bddGestServKestCourcDataSet";
+            this.bddGestServKestCourcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // etatBindingSource
             // 
@@ -63,11 +66,10 @@
             // labelChangement
             // 
             this.labelChangement.AutoSize = true;
-            this.labelChangement.Location = new System.Drawing.Point(12, 24);
+            this.labelChangement.Location = new System.Drawing.Point(82, 31);
             this.labelChangement.Name = "labelChangement";
-            this.labelChangement.Size = new System.Drawing.Size(124, 13);
+            this.labelChangement.Size = new System.Drawing.Size(0, 13);
             this.labelChangement.TabIndex = 1;
-            this.labelChangement.Text = "Entrez la nouvelle Valeur";
             // 
             // etatTableAdapter
             // 
@@ -83,6 +85,10 @@
             this.buttValiderChangement.UseVisualStyleBackColor = true;
             this.buttValiderChangement.Click += new System.EventHandler(this.buttValiderChangement_Click_1);
             // 
+            // etatTableAdapter1
+            // 
+            this.etatTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormulaireModif
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,11 +96,12 @@
             this.ClientSize = new System.Drawing.Size(284, 118);
             this.Controls.Add(this.buttValiderChangement);
             this.Controls.Add(this.labelChangement);
-            this.Controls.Add(this.comboChangement);
             this.Name = "FormulaireModif";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormulaireModif";
             this.Load += new System.EventHandler(this.FormulaireModif_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.etatBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bddGestServKestCourcDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.etatBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m2l_Marco_SalimDataSet4)).EndInit();
             this.ResumeLayout(false);
@@ -104,11 +111,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboChangement;
         private System.Windows.Forms.Label labelChangement;
         private m2l_Marco_SalimDataSet4 m2l_Marco_SalimDataSet4;
         private System.Windows.Forms.BindingSource etatBindingSource;
         private m2l_Marco_SalimDataSet4TableAdapters.etatTableAdapter etatTableAdapter;
         private System.Windows.Forms.Button buttValiderChangement;
+        private bddGestServKestCourcDataSet bddGestServKestCourcDataSet;
+        private System.Windows.Forms.BindingSource etatBindingSource1;
+        private bddGestServKestCourcDataSetTableAdapters.etatTableAdapter etatTableAdapter1;
     }
 }

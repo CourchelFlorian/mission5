@@ -186,6 +186,7 @@
             this.Name = "Facture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facture";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Facture_FormClosed);
             this.Load += new System.EventHandler(this.Facture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ligueBindingSource)).EndInit();

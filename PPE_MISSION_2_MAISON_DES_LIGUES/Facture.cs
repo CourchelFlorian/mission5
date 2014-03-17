@@ -12,6 +12,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
     public partial class Facture : Form
     {
         private Form menuConnexion;
+        private Form menuGrade1;
         ServiceDemandeDAO factureEditer = new ServiceDemandeDAO();
         int ligue;
         int mois;
@@ -19,6 +20,13 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         public Facture()
         {
             InitializeComponent();
+        }
+
+        public Facture(Form pForm, Form pMenuGrade1)
+        {
+            InitializeComponent();
+            menuGrade1 = pMenuGrade1;
+            menuConnexion = pForm;
         }
 
         public Facture(Form pForm)
@@ -67,6 +75,11 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         {
             menuConnexion.Show();
             this.Close();
+        }
+
+        private void Facture_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuGrade1.Show();
         }
     }
 }

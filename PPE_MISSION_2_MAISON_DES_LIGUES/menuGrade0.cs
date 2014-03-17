@@ -17,10 +17,10 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         {
             InitializeComponent();
         }
-        public menuGrade0(Int32 pId, Form pForm)
+        public menuGrade0(Int32 pId, Form pForm)//autre constructeur avec le formulaire de connexion en paramètre en plus de l'id
         {
             InitializeComponent();
-            menuConnexion = pForm;
+            menuConnexion = pForm;//attribution du menuConnexion passé en param
             idadherent = pId;
         }
         public menuGrade0(int pId)
@@ -81,10 +81,10 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
             }
         }
 
-        private void btnDeco_Click(object sender, EventArgs e)
+        private void btnDeco_Click(object sender, EventArgs e)//sur le clique du bouton deco
         {
-            menuConnexion.Show();
-            this.Close();
+            menuConnexion.Show();//on montre le menu de connexion  
+            this.Close();//on ferme le menu actuel
         }
     }
 }
