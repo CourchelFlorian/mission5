@@ -16,6 +16,7 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
 
         public bool verifUtilisateur(string login,string mdp,out int pGrade, out int pId)
         {
+            // Canard
             bool Verif = false;
             pGrade = 888;
             pId = 0;
