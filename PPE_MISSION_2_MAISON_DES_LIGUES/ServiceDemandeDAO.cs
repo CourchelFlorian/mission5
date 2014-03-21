@@ -12,30 +12,60 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
 {
     class ServiceDemandeDAO
     {
-        public Boolean create(int idAdherent , int idService, string dateDemande,string heure,string min)
+        public Boolean create(int idAdherent, int idService, string dateDemande, string heure, string min)
         {
-
+            Boolean DemandeLibre = true;
             string[] split = dateDemande.Split(new Char[] { ' ' });
             string date = split[0];
             string newDate = date + " " + heure + ":" + min;
             SqlCommand maRequete;
-            string sqlStr = "INSERT INTO serviceDemande (idAdherent, idService, dateDemande) VALUES("+idAdherent+","+idService+",'"+newDate+"')";
+            SqlCommand existeDeja;
+            // La requête compte le nombre de lignes 
+            string requete = "SELECT COUNT(*) AS nb FROM serviceDemande WHERE idAdherent = " + idAdherent + " AND dateDemande ='" + newDate + "' AND idService = " + idService;
+            string sqlStr = "INSERT INTO serviceDemande (idAdherent, idService, dateDemande) VALUES(" + idAdherent + "," + idService + ",'" + newDate + "')";
             string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
             SqlConnection maConnexion;
             try
             {
-               maConnexion = new SqlConnection();
-               maConnexion.ConnectionString = connStr;
-               maConnexion.Open();
+                maConnexion = new SqlConnection();
+                maConnexion.ConnectionString = connStr;
+                maConnexion.Open();
 
-               maRequete = new SqlCommand(sqlStr, maConnexion);
-               maRequete.ExecuteNonQuery();
+                maRequete = new SqlCommand(sqlStr, maConnexion);
+
+                // Création d'un objet SqlCommand
+                existeDeja = new SqlCommand(requete, maConnexion);
+                // Ce sera du texte
+                existeDeja.CommandType = CommandType.Text;
+                // Execution de la requête (reader car SELECT)
+                SqlDataReader verifDate = existeDeja.ExecuteReader();
+
+                // Si la requête retourne quelque chose 
+                if (verifDate.Read()) // If car une seule ligne retournée
+                {
+                    // On récupère le nombre de ligne
+                    int nb = (int)verifDate["nb"];
+                    // Si la ligne existe déjà on affiche une erreur
+                    if (nb >= 1)
+                    {
+                        DemandeLibre = false;
+                        MessageBox.Show("La demande a déjà été demandée");
+                    }
+                    else
+                    {
+                        // On ferme la requête sinon l'insertion ne fonctionne pas
+                        verifDate.Close();
+                        // On exécute la requête d'insertion
+                        maRequete.ExecuteNonQuery();
+
+                    }
+                }
             }
             catch (Exception e)
             {
 
             }
-            return true;
+            return DemandeLibre;
         }
 
         public DataGridView find(DataGridView pTableau)
