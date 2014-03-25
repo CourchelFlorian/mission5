@@ -152,12 +152,57 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
                     pTableau.Rows.Add("", "", "", "", total);
                     pTableau.Rows.Add();
                 }
+                unJeuResultat.Close();
             }
             catch (Exception e) // Try … catch permet la gestion des erreurs.
             {
 
             }
             return pTableau;
+        }
+
+        public Boolean factureUpdate(int mois, int annee)
+        {
+            SqlCommand maRequete;
+            string sqlStr = "SELECT ligue.id AS idLigue, ligue.libelleLigue AS nomLigue, adherent.nomAdherent, etat.libelleEtat, typeService.libelleService, typeService.prix, serviceDemande.dateDemande, serviceDemande.id AS idServ FROM adherent INNER JOIN serviceDemande ON adherent.id = serviceDemande.idAdherent INNER JOIN typeService ON serviceDemande.idService = typeService.id INNER JOIN ligue ON adherent.idLigue = ligue.id INNER JOIN etat ON serviceDemande.idEtat = etat.id WHERE (MONTH(serviceDemande.dateDemande) = " + mois + ") AND (etat.id = 1) AND (YEAR(serviceDemande.dateDemande) = " + annee + ")";
+            string connStr = "Data Source = WIN-921C8FKTGAE; Initial Catalog=bddGestServKestCourc ;User ID=sio2slam ;Password=";
+            SqlConnection maConnexion, canard;
+            Boolean retour = false;
+            try
+            {
+                maConnexion = new SqlConnection();
+                maConnexion.ConnectionString = connStr;
+                maConnexion.Open();
+
+                maRequete = new SqlCommand(sqlStr, maConnexion);
+                maRequete.CommandType = CommandType.Text;
+                SqlDataReader unJeuResultat = maRequete.ExecuteReader();
+                while (unJeuResultat.Read())
+                {
+                    SqlCommand update;
+                    string requete = "Update serviceDemande set idEtat = 2 WHERE id = " + unJeuResultat["idServ"];
+                    try
+                    {
+                        retour = true;
+                        canard = new SqlConnection();
+                        canard.ConnectionString = connStr;
+                        canard.Open();
+
+                        update = new SqlCommand(requete, canard);
+                        update.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        retour = false;
+                    }
+
+                }                
+            }
+            catch (Exception e) // Try … catch permet la gestion des erreurs.
+            {
+
+            }
+            return (retour);
         }
 
         public ComboBox remplirCombo(ComboBox cmbAnne)

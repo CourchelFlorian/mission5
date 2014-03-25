@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace PPE_MISSION_2_MAISON_DES_LIGUES
 {
     public partial class Facture : Form
@@ -80,6 +81,31 @@ namespace PPE_MISSION_2_MAISON_DES_LIGUES
         private void Facture_FormClosed(object sender, FormClosedEventArgs e)
         {
             menuGrade1.Show();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            factureEditer.factureUpdate(mois, annee);
+            actualiserTableauFacture();
+            /*bool toto = Convert.ToBoolean(printDialog1.ShowDialog());
+            if (toto==true)
+            {
+                MessageBox.Show("canard");
+                //printDocument1.Print();
+            }*/
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument1;
+            printDialog.UseEXDialog = true;
+            if (DialogResult.OK == printDialog.ShowDialog())
+            {
+                //printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            PaintEventArgs myPaintArgs = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
+            this.InvokePaint(dataGridView1, myPaintArgs);
         }
     }
 }
